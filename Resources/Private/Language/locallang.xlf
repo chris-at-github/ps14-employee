@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:employee/Resources/Private/Language/locallang" date="2021-05-18T23:11:34Z" product-name="employee">
+		<header/>
+		<body>
+			<trans-unit id="tx_employee_domain_model_employee" resname="tx_employee_domain_model_employee">
+				<source>Employee</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

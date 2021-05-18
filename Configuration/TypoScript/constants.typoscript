@@ -1,0 +1,14 @@
+plugin.tx_employee_frontend {
+    view {
+        # cat=plugin.tx_employee_frontend/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:employee/Resources/Private/Templates/
+        # cat=plugin.tx_employee_frontend/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:employee/Resources/Private/Partials/
+        # cat=plugin.tx_employee_frontend/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:employee/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_employee_frontend//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

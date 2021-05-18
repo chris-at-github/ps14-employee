@@ -1,0 +1,90 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    281,
+                    201
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Employee",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "tt_address",
+                    "parentClass": "\\Ps\\Xo\\Domain\\Model\\Address",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "174137680640"
+                },
+                "propertyGroup": {
+                    "properties": []
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 10.4.0-10.4.99\n'xo' => '1.0.0-1.99.99'\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "10.4.0-10.4.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "employee",
+        "name": "Ps14 Employee",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "",
+                "email": "pschorr.christian@gmail.com",
+                "name": "Christian Pschorr",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": ""
+                },
+                "description": "",
+                "key": "frontend",
+                "name": "Employee Frontend"
+            }
+        ],
+        "vendorName": "Ps14"
+    },
+    "wires": [],
+    "storagePath": "D:\/Projekte\/Xna\/01_Development\/typo3conf\/ext\/",
+    "log": {
+        "last_modified": "2021-05-18 11:11",
+        "extension_builder_version": "9.11.0",
+        "be_user": " (1)"
+    }
+}

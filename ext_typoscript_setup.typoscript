@@ -1,0 +1,23 @@
+
+
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      Ps\Xo\Domain\Model\Address {
+        subclasses {
+          Tx_Employee_Employee = Ps14\Employee\Domain\Model\Employee
+          
+        }
+      }
+      Ps14\Employee\Domain\Model\Employee {
+        mapping {
+          tableName = tt_address
+          recordType = Tx_Employee_Employee
+        }
+      }
+
+    }
+  }
+}
