@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Ps14\Employee\Domain\Repository;
 
-
 /**
  *
  * This file is part of the "Ps14 Employee" Extension for TYPO3 CMS.
@@ -17,6 +16,5 @@ namespace Ps14\Employee\Domain\Repository;
 /**
  * The repository for Employees
  */
-class EmployeeRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
-{
+class EmployeeRepository extends \Ps\Xo\Domain\Repository\AddressRepository {
 }

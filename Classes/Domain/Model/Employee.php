@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Ps14\Employee\Domain\Model;
 
-
 /**
  *
  * This file is part of the "Ps14 Employee" Extension for TYPO3 CMS.
@@ -17,6 +16,5 @@ namespace Ps14\Employee\Domain\Model;
 /**
  * Employee
  */
-class Employee extends \Ps\Xo\Domain\Model\Address
-{
+class Employee extends \Ps\Xo\Domain\Model\Address {
 }
