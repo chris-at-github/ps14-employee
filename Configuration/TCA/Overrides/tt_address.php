@@ -4,20 +4,20 @@ defined('TYPO3_MODE') || die();
 // ---------------------------------------------------------------------------------------------------------------------
 // Neuer Extbase-Typ
 if(isset($GLOBALS['TCA']['tt_address']['columns']['record_type']) === true) {
-	$GLOBALS['TCA']['tt_address']['columns']['record_type']['config']['items'][] = ['LLL:EXT:employee/Resources/Private/Language/locallang_db.xlf:tx_contact_domain_model_contact.record_type', \Ps14\Employee\Domain\Model\Employee::class];
+	$GLOBALS['TCA']['tt_address']['columns']['record_type']['config']['items'][] = ['LLL:EXT:employee/Resources/Private/Language/locallang_tca.xlf:tx_employee_domain_model_employee.record_type', \Ps14\Employee\Domain\Model\Employee::class];
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Neue Paletten
-$GLOBALS['TCA']['tt_address']['palettes']['contactName'] = [
-	'showitem' => 'gender, --linebreak--, first_name, last_name,'
+$GLOBALS['TCA']['tt_address']['palettes']['employeeName'] = [
+	'showitem' => 'gender, --linebreak--, first_name, last_name, --linebreak--, position,'
 ];
 
-$GLOBALS['TCA']['tt_address']['palettes']['contactContact'] = [
-	'showitem' => 'phone, email,'
+$GLOBALS['TCA']['tt_address']['palettes']['employeeImage'] = [
+	'showitem' => 'image,'
 ];
 
-$GLOBALS['TCA']['tt_address']['palettes']['contactHidden'] = [
+$GLOBALS['TCA']['tt_address']['palettes']['employeeHidden'] = [
 	'showitem' => 'record_type',
 	'isHiddenPalette' => 0
 ];
@@ -25,12 +25,12 @@ $GLOBALS['TCA']['tt_address']['palettes']['contactHidden'] = [
 // ---------------------------------------------------------------------------------------------------------------------
 // Neue Feldzuordnungen
 $GLOBALS['TCA']['tt_address']['types'][\Ps14\Employee\Domain\Model\Employee::class]['showitem'] = '
-		--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.name;contactName,
-		--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.contact;contactContact,
+		--palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.name;employeeName,
+		--palette--;;employeeImage,
 	,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
 		--palette--;;language,
 	--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
 		--palette--;;paletteHidden, 
 		--palette--;;paletteAccess,
-		--palette--;;contactHidden,
+		--palette--;;employeeHidden,
 ';
