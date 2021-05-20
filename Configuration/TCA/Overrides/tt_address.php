@@ -10,7 +10,7 @@ if(isset($GLOBALS['TCA']['tt_address']['columns']['record_type']) === true) {
 // ---------------------------------------------------------------------------------------------------------------------
 // Neue Paletten
 $GLOBALS['TCA']['tt_address']['palettes']['employeeName'] = [
-	'showitem' => 'gender, --linebreak--, first_name, last_name, --linebreak--, position,'
+	'showitem' => 'gender, --linebreak--, first_name, last_name, --linebreak--, title, position,'
 ];
 
 $GLOBALS['TCA']['tt_address']['palettes']['employeeImage'] = [
@@ -34,3 +34,26 @@ $GLOBALS['TCA']['tt_address']['types'][\Ps14\Employee\Domain\Model\Employee::cla
 		--palette--;;paletteAccess,
 		--palette--;;employeeHidden,
 ';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Images
+$GLOBALS['TCA']['tt_address']['types'][\Ps14\Employee\Domain\Model\Employee::class]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+	'default' => [
+		'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.crop_variant.default',
+		'allowedAspectRatios' => [
+			'3_4' => [
+				'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.ratio.3_4',
+				'value' => 3 / 4
+			],
+			'1_1' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
+				'value' => 1
+			],
+		],
+		'selectedRatio' => '3_4',
+	],
+];
+
+// Override in xna/Configuration/TCA/Overrides/tt_address.php -> falls gesonderte Groeßen noetig sind
+//$GLOBALS['TCA']['tt_address']['types'][\Ps14\Employee\Domain\Model\Employee::class]['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+//];
