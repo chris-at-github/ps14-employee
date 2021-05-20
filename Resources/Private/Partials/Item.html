@@ -1,0 +1,31 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<div class="address employee">
+
+			<f:if condition="{employee.image.0}">
+				<div class="employee--image">
+					<f:render partial="Components/Media" section="Picture" arguments="{
+						file: employee.image.0,
+						image: {width: 560, height: 560, cropVariant: 'default'},
+						sizes: {
+							0: {width: 560, height: 560, mediaQuery: '(min-width: 1200px)', cropVariant: 'default'},
+							1: {width: 280, height: 280, mediaQuery: '(min-width: 768px)', cropVariant: 'default'},
+							2: {width: 160, height: 160, mediaQuery: '(min-width: 0px)', cropVariant: 'default'}
+						}
+					}" />
+				</div>
+			</f:if>
+
+			<f:if condition="{employee.firstName} || {employee.lastName}">
+				<div class="employee--name">
+					<f:render partial="Components/Person" section="Name" arguments="{person: employee}" />
+				</div>
+			</f:if>
+
+			<f:if condition="{employee.position}">
+				<div class="employee--position">{employee.position}</div>
+			</f:if>
+
+		</div>
+	</f:section>
+</div>

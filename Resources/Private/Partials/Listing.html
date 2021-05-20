@@ -1,0 +1,11 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<ul class="employee--container">
+			<f:for each="{employees}" as="employee">
+				<li>
+					<f:render partial="Item" section="Main" arguments="{_all}" />
+				</li>
+			</f:for>
+		</ul>
+	</f:section>
+</div>

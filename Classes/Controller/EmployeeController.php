@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Ps14\Employee\Controller;
 
+use Ps14\Employee\Domain\Repository\EmployeeRepository;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /**
  *
  * This file is part of the "Ps14 Employee" Extension for TYPO3 CMS.
@@ -18,27 +21,24 @@ namespace Ps14\Employee\Controller;
  */
 class EmployeeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
-//	/**
-//	 * employeeRepository
-//	 *
-//	 * @var \Ps14\Employee\Domain\Repository\EmployeeRepository
-//	 */
-//	protected $employeeRepository = null;
-//
-//	/**
-//	 * @param \Ps14\Employee\Domain\Repository\EmployeeRepository $employeeRepository
-//	 */
-//	public function injectEmployeeRepository(\Ps14\Employee\Domain\Repository\EmployeeRepository $employeeRepository) {
-//		$this->employeeRepository = $employeeRepository;
-//	}
-//
-//	/**
-//	 * action list
-//	 *
-//	 * @return void
-//	 */
-//	public function listAction() {
-//		$employees = $this->employeeRepository->findAll();
-//		$this->view->assign('employees', $employees);
-//	}
+	/**
+	 * employeeRepository
+	 *
+	 * @var EmployeeRepository
+	 */
+	protected $employeeRepository = null;
+
+	/**
+	 * @param EmployeeRepository $employeeRepository
+	 */
+	public function __construct(EmployeeRepository $employeeRepository) {
+		$this->employeeRepository = $employeeRepository;
+	}
+
+	/**
+	 * @return void
+	 */
+	public function listingAction() {
+		$this->view->assign('employees', $this->employeeRepository->findAll());
+	}
 }

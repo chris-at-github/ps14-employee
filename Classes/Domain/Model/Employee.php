@@ -16,5 +16,5 @@ namespace Ps14\Employee\Domain\Model;
 /**
  * Employee
  */
-class Employee {
+class Employee extends \Ps\Xo\Domain\Model\Address {
 }
