@@ -30,3 +30,17 @@ plugin.tx_employee {
 		#callDefaultActionIfActionCantBeResolved = 1
 	}
 }
+
+tt_content {
+	list {
+		dataProcessing {
+			200 {
+				employee_frontend {
+					importCss {
+						10 = /assets/css/modules/employee.css
+					}
+				}
+			}
+		}
+	}
+}
