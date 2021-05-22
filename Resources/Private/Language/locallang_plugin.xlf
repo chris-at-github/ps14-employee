@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:employee/Resources/Private/Language/locallang_plugin" date="2021-05-18T23:11:34Z" product-name="employee">
+		<header/>
+		<body>
+			<trans-unit id="settings.sheet.record">
+				<source>Records</source>
+			</trans-unit>
+			<trans-unit id="settings.sheet.seo">
+				<source>SEO</source>
+			</trans-unit>
+
+			<trans-unit id="settings.record.storagePid">
+				<source>Folder</source>
+			</trans-unit>
+			<trans-unit id="settings.seo.structuredData">
+				<source>Use structured data</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
