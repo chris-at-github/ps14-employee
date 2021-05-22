@@ -15,22 +15,59 @@ $tx-employee---layout-default: true !default;
 	// -------------------------------------------------------------------------------------------------------------------
 	// Component
 	.employee {
-		background: gold;
+		.employee--name {
+			margin: rem(8px 0 0 0);
+			font-weight: $font-weight-bold;
+		}
+
+		.employee--image {
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+		}
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Default-Darstellung
 	@if($tx-employee---layout-default) {
+		.employee--container {
+			& {
+				@include make-row();
+				margin-top: rem(-20px); // Ausgleich um auf etwa 20px nach oben zu kommen
+				padding: 0;
+				list-style: none;
+			}
+
+			& > li {
+				margin-top: rem(40px);
+				@include make-col-ready();
+			}
+		}
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// >= 576px
 	@include media-breakpoint-up(sm) {
+		@if($tx-employee---layout-default) {
+			.employee--container {
+				& > li {
+					@include make-col(6);
+				}
+			}
+		}
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// >= 768px
 	@include media-breakpoint-up(md) {
+		@if($tx-employee---layout-default) {
+			.employee--container {
+				& > li {
+					@include make-col(4);
+				}
+			}
+		}
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
