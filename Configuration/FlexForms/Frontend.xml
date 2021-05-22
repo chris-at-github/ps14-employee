@@ -10,7 +10,7 @@
 				</TCEforms>
 				<type>array</type>
 				<el>
-					<settings.records>
+					<settings.storagePid>
 						<TCEforms>
 							<label>LLL:EXT:employee/Resources/Private/Language/locallang_plugin.xlf:settings.record.storagePid</label>
 							<config>
@@ -27,7 +27,7 @@
 								</wizards>
 							</config>
 						</TCEforms>
-					</settings.records>
+					</settings.storagePid>
 				</el>
 			</ROOT>
 		</main>

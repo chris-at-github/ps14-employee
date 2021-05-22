@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Ps14\Employee\Controller;
 
+use Ps\Xo\Controller\AddressController;
 use Ps14\Employee\Domain\Repository\EmployeeRepository;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -19,7 +20,7 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 /**
  * EmployeeController
  */
-class EmployeeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class EmployeeController extends AddressController {
 
 	/**
 	 * employeeRepository
@@ -39,6 +40,6 @@ class EmployeeController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @return void
 	 */
 	public function listingAction() {
-		$this->view->assign('employees', $this->employeeRepository->findAll());
+		$this->view->assign('employees', $this->employeeRepository->findAll($this->getDemand()));
 	}
 }
