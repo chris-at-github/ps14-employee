@@ -21,6 +21,10 @@
 			<f:if condition="{employee.position}">
 				<div class="employee--position">{employee.position}</div>
 			</f:if>
+
+			<f:if condition="{settings.structuredData}">
+				<xo:jsonLd.person address="{employee}" />
+			</f:if>
 		</div>
 	</f:section>
 </div>
