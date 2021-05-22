@@ -29,6 +29,35 @@ plugin.tx_employee {
 	mvc {
 		#callDefaultActionIfActionCantBeResolved = 1
 	}
+
+	settings {
+		image {
+			default {
+				width = 510
+				height = 510
+				cropVariant = default
+				mediaQueries {
+					0 {
+						maxWidth = 510
+						cropVariant = default
+						mediaQuery = (min-width: 0px)
+					}
+
+					1 {
+						maxWidth = 337
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 576px)
+					}
+
+					2 {
+						maxWidth = 360
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 767px)
+					}
+				}
+			}
+		}
+	}
 }
 
 tt_content {
@@ -44,3 +73,4 @@ tt_content {
 		}
 	}
 }
+
