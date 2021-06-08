@@ -1,14 +1,23 @@
 plugin.tx_employee {
 	view {
-		layoutRootPaths.0 = EXT:employee/Resources/Private/Layouts/
-		layoutRootPaths.1 = {$plugin.tx_employee.view.layoutRootPath}
+		layoutRootPaths {
+			10 = EXT:employee/Resources/Private/Layouts/
+			20 = EXT:xna/Resources/Private/Extensions/Employee/Layouts/
+			30 = {$plugin.tx_employee.view.layoutRootPath}
+		}
 
-		templateRootPaths.0 = EXT:employee/Resources/Private/Templates/
-		templateRootPaths.1 = {$plugin.tx_employee.view.templateRootPath}
+		templateRootPaths {
+			10 = EXT:employee/Resources/Private/Templates/
+			20 = EXT:xna/Resources/Private/Extensions/Employee/Templates/
+			30 = {$plugin.tx_employee.view.templateRootPath}
+		}
 
-		partialRootPaths.0 = EXT:employee/Resources/Private/Partials/
-		partialRootPaths.1 = {$plugin.tx_employee.view.partialRootPath}
-		partialRootPaths.2 = EXT:xo/Resources/Private/Extensions/Xo/Partials/
+		partialRootPaths {
+			10 = EXT:employee/Resources/Private/Partials/
+			20 = EXT:xo/Resources/Private/Extensions/Xo/Partials/
+			30 = EXT:xna/Resources/Private/Extensions/Employee/Partials/
+			40 = {$plugin.tx_employee.view.templateRootPath}
+		}
 	}
 
 	persistence {
