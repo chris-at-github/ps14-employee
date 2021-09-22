@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Ps14\Employee\Domain\Repository;
 
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+
 /**
  *
  * This file is part of the "Ps14 Employee" Extension for TYPO3 CMS.
@@ -17,4 +19,7 @@ namespace Ps14\Employee\Domain\Repository;
  * The repository for Employees
  */
 class EmployeeRepository extends \Ps\Xo\Domain\Repository\AddressRepository {
+	protected $defaultOrderings = [
+		'sorting' => QueryInterface::ORDER_ASCENDING
+	];
 }
